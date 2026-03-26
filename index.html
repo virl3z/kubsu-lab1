@@ -26,9 +26,6 @@
             border-radius: 5px;
             margin: 10px 0;
         }
-        .screenshot {
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
@@ -36,27 +33,28 @@
     <p><strong>Студент:</strong> Алейник Григорий</p>
     <p><strong>Дата выполнения:</strong> <script>document.write(new Date().toLocaleDateString());</script></p>
 
-    <h2>1. Подключение по SSH</h2>
-    <img src="1.png" alt="Подключение по SSH">
+    <h2>1. Ping kubsu.ru</h2>
+    <img src="1.png" alt="Ping kubsu.ru">
 
-    <h2>2. Определение IP-адреса kubsu.ru (ping)</h2>
-    <img src="2.png" alt="Скриншот команды ping">
+    <h2>2. A-запись kubsu.ru (nslookup)</h2>
+    <img src="2.png" alt="A-запись kubsu.ru">
 
-    <h2>3. A-записи доменов (nslookup)</h2>
-    <p>Команды: <code>nslookup kubsu.ru</code> и <code>nslookup kubsu-dev.ru</code></p>
-    <img src="3.png" alt="A-записи">
+    <h2>3. MX-запись kubsu.ru (nslookup -type=mx)</h2>
+    <img src="3.png" alt="MX-запись kubsu.ru">
 
-    <h2>4. MX-записи доменов (nslookup)</h2>
-    <p>Команды: <code>nslookup -type=mx kubsu.ru</code> и <code>nslookup -type=mx kubsu-dev.ru</code></p>
-    <img src="4.png" alt="MX-записи">
+    <h2>4. A-запись kubsu-dev.ru (nslookup)</h2>
+    <img src="4.png" alt="A-запись kubsu-dev.ru">
 
-    <h2>5. Дата регистрации домена kubsu.ru (whois)</h2>
-    <img src="5.png" alt="WHOIS kubsu.ru">
+    <h2>5. MX-запись kubsu-dev.ru (nslookup -type=mx)</h2>
+    <img src="5.png" alt="MX-запись kubsu-dev.ru">
 
-    <h2>6. Дата регистрации домена kubsu-dev.ru (whois)</h2>
-    <img src="6.png" alt="WHOIS kubsu-dev.ru">
+    <h2>6. WHOIS kubsu.ru (дата регистрации)</h2>
+    <img src="6.png" alt="WHOIS kubsu.ru">
 
-    <h2>7. Копирование файлов через SFTP (FileZilla)</h2>
-    <img src="7.png" alt="Скриншот FileZilla">
+    <h2>7. WHOIS kubsu-dev.ru (дата регистрации)</h2>
+    <img src="7.png" alt="WHOIS kubsu-dev.ru">
+
+    <h2>8. Копирование файлов через SFTP (FileZilla)</h2>
+    <img src="8.png" alt="Скриншот FileZilla">
 </body>
 </html>
