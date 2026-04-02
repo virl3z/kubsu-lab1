@@ -2,59 +2,239 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Отчет по лабораторной работе №1</title>
+    <title>Лабораторная работа 1</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background: #e8eef2;
+            color: #2c3e50;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
         }
-        h1 {
-            color: #333;
-            text-align: center;
+        
+        .header {
+            background: #f5f7f9;
+            padding: 1.8rem 2.5rem;
+            border-bottom: 1px solid #e2e8f0;
         }
+        
+        .header h1 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 0.25rem;
+        }
+        
+        .header p {
+            font-size: 0.9rem;
+            color: #5a6e7c;
+            margin: 0;
+        }
+        
+        .content {
+            padding: 2rem 2.5rem;
+        }
+        
+        .student-info {
+            background: #f9fbfd;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 3px solid #9aaebf;
+        }
+        
+        .student-info p {
+            margin: 0.25rem 0;
+        }
+        
+        .student-info strong {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
         h2 {
-            color: #555;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin: 1.8rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
         }
+        
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin: 1.2rem 0 0.7rem 0;
+        }
+        
+        p {
+            margin: 0.75rem 0;
+            color: #4a5b68;
+        }
+        
+        ul {
+            margin: 0.75rem 0 0.75rem 1.5rem;
+            color: #4a5b68;
+        }
+        
+        li {
+            margin: 0.25rem 0;
+        }
+        
+        pre {
+            background: #f8fafc;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+            font-size: 0.85rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            color: #2c3e50;
+            line-height: 1.5;
+        }
+        
         img {
             max-width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: 10px 0;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            margin: 0.75rem 0;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 1.8rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 1.5rem;
+            }
+            
+            .header {
+                padding: 1.5rem;
+            }
+            
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Отчет по лабораторной работе №1</h1>
-    <p><strong>Студент:</strong> Алейник Григорий</p>
-    <p><strong>Дата выполнения:</strong> <script>document.write(new Date().toLocaleDateString());</script></p>
+    <div class="container">
+        <div class="header">
+            <h1>Лабораторная работа 1</h1>
+        </div>
+        
+        <div class="content">
+            <div class="student-info">
+                <p><strong>Студент:</strong> Алейник Григорий</p>
+                <p><strong>Логин:</strong> u82669</p>
+            </div>
 
-    <h2>1. Ping kubsu.ru</h2>
-    <img src="1.png" alt="Ping kubsu.ru">
+            <h2>1. Подключение к учебному серверу по SSH</h2>
+            <p>Для подключения к учебному серверу университета, использующему протокол SSH, я использовал приложение PuTTY.</p>
+            <img src="1.png" alt="PuTTY подключение">
+            <p>Скриншот 1: Настройки подключения в PuTTY и приветственный экран после входа.</p>
+            <p>Чтобы подключиться к нужному серверу, я ввел данные:</p>
+            <ul>
+                <li>Host Name: kubsu-dev.ru</li>
+                <li>Port: 58528 (порт был выдан преподавателем, так как со стандартным портом не подключалось)</li>
+                <li>Connection type: SSH</li>
+            </ul>
 
-    <h2>2. A-запись kubsu.ru (nslookup)</h2>
-    <img src="2.png" alt="A-запись kubsu.ru">
+            <h2>2. Определение IP-адреса (команда ping)</h2>
+            <p><strong>Команда:</strong> ping kubsu.ru</p>
+            <p><strong>Что делает команда:</strong> Утилита ping отправляет ICMP-запросы на указанный узел и измеряет время ответа.</p>
+            <p><strong>Результат:</strong> Я получил IP адрес сервера kubsu.ru (185.13.84.92).</p>
+            <img src="2.png" alt="ping результат">
+            <p>Скриншот 2: Результат выполнения команды ping для kubsu.ru.</p>
 
-    <h2>3. MX-запись kubsu.ru (nslookup -type=mx)</h2>
-    <img src="3.png" alt="MX-запись kubsu.ru">
+            <h2>3. DNS-записи (команда nslookup)</h2>
 
-    <h2>4. A-запись kubsu-dev.ru (nslookup)</h2>
-    <img src="4.png" alt="A-запись kubsu-dev.ru">
+            <h3>A-запись домена kubsu.ru</h3>
+            <p><strong>Команда:</strong> nslookup -type=A kubsu.ru</p>
+            <p><strong>Что делает команда:</strong> Запрашивает у DNS-сервера адресную запись (A-запись) для домена, которая связывает имя с IPv4-адресом.</p>
+            <p><strong>Результат:</strong> Я получил IP адрес сервера kubsu.ru 185.13.84.92.</p>
+            <img src="3.png" alt="A-записи kubsu.ru">
+            <p>Скриншот 3: A-записи домена kubsu.ru.</p>
 
-    <h2>5. MX-запись kubsu-dev.ru (nslookup -type=mx)</h2>
-    <img src="5.png" alt="MX-запись kubsu-dev.ru">
+            <h3>MX-запись домена kubsu.ru</h3>
+            <p><strong>Команда:</strong> nslookup -type=MX kubsu.ru</p>
+            <p><strong>Что делает команда:</strong> Запрашивает MX-записи домена, указывающие, какие почтовые серверы обслуживают домен и с каким приоритетом.</p>
+            <p><strong>Результат:</strong> Я получил почтовые сервера, обслуживающие kubsu.ru.</p>
+            <img src="4.png" alt="MX-записи kubsu.ru">
+            <p>Скриншот 4: MX-записи домена kubsu.ru.</p>
 
-    <h2>6. WHOIS kubsu.ru (дата регистрации)</h2>
-    <img src="6.png" alt="WHOIS kubsu.ru">
+            <h3>A-запись домена kubsu-dev.ru</h3>
+            <p><strong>Команда:</strong> nslookup -type=A kubsu-dev.ru</p>
+            <p><strong>Что делает команда:</strong> Запрашивает у DNS-сервера адресную запись (A-запись) для домена kubsu-dev.ru.</p>
+            <p><strong>Результат:</strong> Я получил IP адрес сервера kubsu-dev.ru.</p>
+            <img src="5.png" alt="A-записи kubsu-dev.ru">
+            <p>Скриншот 5: A-записи домена kubsu-dev.ru.</p>
 
-    <h2>7. WHOIS kubsu-dev.ru (дата регистрации)</h2>
-    <img src="7.png" alt="WHOIS kubsu-dev.ru">
+            <h3>MX-запись домена kubsu-dev.ru</h3>
+            <p><strong>Команда:</strong> nslookup -type=MX kubsu-dev.ru</p>
+            <p><strong>Что делает команда:</strong> Запрашивает MX-записи домена, указывающие, какие почтовые серверы обслуживают домен.</p>
+            <p><strong>Результат:</strong> Для домена kubsu-dev.ru не найдено MX-записей (либо результат не отображен на скриншоте).</p>
+            <img src="6.png" alt="MX-записи kubsu-dev.ru">
+            <p>Скриншот 6: MX-записи домена kubsu-dev.ru.</p>
 
-    <h2>8. Копирование файлов через SFTP (FileZilla)</h2>
-    <img src="8.png" alt="Скриншот FileZilla">
+            <h2>4. Информация о регистрации доменов (команда whois)</h2>
+
+            <h3>Домен kubsu.ru</h3>
+            <p><strong>Команда:</strong> whois kubsu.ru</p>
+            <p><strong>Что делает команда:</strong> Утилита whois запрашивает регистрационные данные домена из базы данных регистратора.</p>
+            <p><strong>Результат:</strong> В результате вывелась информация о регистрации домена kubsu.ru.</p>
+            <img src="7.png" alt="whois kubsu.ru">
+            <p>Скриншот 7: Результат выполнения whois для kubsu.ru.</p>
+
+            <h3>Домен kubsu-dev.ru</h3>
+            <p><strong>Команда:</strong> whois kubsu-dev.ru</p>
+            <p><strong>Что делает команда:</strong> Утилита whois запрашивает регистрационные данные домена из базы данных регистратора для kubsu-dev.ru.</p>
+            <p><strong>Результат:</strong> В результате вывелась информация о регистрации домена kubsu-dev.ru.</p>
+            <img src="8.png" alt="whois kubsu-dev.ru">
+            <p>Скриншот 8: Результат выполнения whois для kubsu-dev.ru.</p>
+
+            <h2>5. Создание веб-страницы и размещение на сервере</h2>
+            <p>Я создал файл index.html и файлы скриншотов, после чего загрузил их в репозиторий на GitHub и склонировал на сервер в каталог www.</p>
+            <p>Веб-страница открывается по адресу: http://u82669.kubsu-dev.ru/lab1/</p>
+
+            <h2>6. Копирование файлов через SFTP (FileZilla)</h2>
+            <p>Я использовал программу FileZilla Client для подключения к серверу по SFTP. Данные для подключения:</p>
+            <ul>
+                <li>Хост: sftp://kubsu-dev.ru</li>
+                <li>Логин: u82669</li>
+                <li>Порт: 58528</li>
+            </ul>
+            <p>После подключения я скопировал файлы из папки ~/www/lab1/ на локальный компьютер.</p>
+            <img src="9.png" alt="FileZilla">
+            <p>Скриншот 9: Окно FileZilla после скачивания файлов с сервера.</p>
+        </div>
+    </div>
 </body>
 </html>
